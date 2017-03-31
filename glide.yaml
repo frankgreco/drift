@@ -1,5 +1,22 @@
 package: github.com/frankgreco/drift
 import:
 - package: github.com/Sirupsen/logrus
-  version: ~0.11.5
+  version: 0.11.5
+- package: github.com/coreos/etcd
+  version: 3.1.5
+  subpackages:
+  - client
+- package: github.com/frankgreco/drift
+  subpackages:
+  - cmd
+  - etcd
+  - pkg/utils
 - package: github.com/spf13/cobra
+- package: golang.org/x/net
+  subpackages:
+  - context
+- package: k8s.io/kubernetes
+  version: 1.6.0
+  subpackages:
+  - pkg/client/unversioned
+  - pkg/kubectl/cmd/util
